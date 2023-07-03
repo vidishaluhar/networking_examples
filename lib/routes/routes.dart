@@ -1,5 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:networking_examples/completer_example.dart';
+import 'package:networking_examples/routes/dio/dio_example.dart';
+import 'package:networking_examples/routes/dio/dio_get_data.dart';
+import 'package:networking_examples/routes/dio/dio_post_data.dart';
 import 'package:networking_examples/routes/http/delete_request.dart';
 import 'package:networking_examples/routes/http/get_request.dart';
 import 'package:networking_examples/routes/http/http_example.dart';
@@ -38,6 +42,26 @@ class Routes {
       case '/httpDelete':
         return MaterialPageRoute(builder: (BuildContext context) {
           return DeleteRequest();
+        });
+
+      case '/completerExample':
+        return MaterialPageRoute(builder: (BuildContext context) {
+          return CompleterExample();
+        });
+
+      case '/dio':
+        return MaterialPageRoute(builder: (BuildContext context) {
+          return DioExample();
+        });
+
+      case '/dioGetData':
+        return MaterialPageRoute(builder: (BuildContext context) {
+          return DioGetData();
+        });
+
+      case '/dioPostData':
+        return MaterialPageRoute(builder: (BuildContext context) {
+          return DioPostData();
         });
     }
   }

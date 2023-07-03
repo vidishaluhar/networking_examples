@@ -41,8 +41,11 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            CustomElevatedButton(pathName: '/http',text: 'Http Package',)
+            CustomElevatedButton(pathName: '/http',text: 'Http',),
+            CustomElevatedButton(pathName: '/completerExample',text: 'Completer Example',),
+            CustomElevatedButton(pathName: '/dio',text: 'Dio',),
           ],
         ),
       ),
