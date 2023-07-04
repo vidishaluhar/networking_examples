@@ -59,9 +59,9 @@ class Routes {
           return DioGetData();
         });
 
-      case '/dioPostData':
+      case '/dioDownloadFile':
         return MaterialPageRoute(builder: (BuildContext context) {
-          return DioPostData();
+          return DioDownloadFile();
         });
     }
   }
