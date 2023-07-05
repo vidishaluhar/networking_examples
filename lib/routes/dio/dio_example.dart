@@ -238,6 +238,10 @@ class DioExample extends StatelessWidget {
                         fontWeight: FontWeight.w500)),
               ),
             ),
+            const CustomElevatedButton(
+              pathName: '/dioIntercepter',
+              text: 'Dio Interceptor',
+            ),
           ],
         ),
       ),

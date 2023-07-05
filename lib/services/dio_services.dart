@@ -162,4 +162,5 @@ class DioService {
       debugPrint("Error while deleting data : $e");
     }
   }
+
 }
