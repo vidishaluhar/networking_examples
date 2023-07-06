@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:networking_examples/routes/routes.dart';
+import 'package:networking_examples/services/dio_services.dart';
+import 'package:dio/dio.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -46,6 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
             CustomElevatedButton(pathName: '/http',text: 'Http',),
             CustomElevatedButton(pathName: '/completerExample',text: 'Completer Example',),
             CustomElevatedButton(pathName: '/dio',text: 'Dio',),
+            CustomElevatedButton(pathName: '/retrofitExample',text: 'Retrofit',),
           ],
         ),
       ),
@@ -69,6 +73,9 @@ class CustomElevatedButton extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: ElevatedButton(
+        style: ButtonStyle(
+          fixedSize:MaterialStatePropertyAll(Size.fromWidth(250))
+        ),
         onPressed: () {
           Navigator.pushNamed(context,pathName);
         },

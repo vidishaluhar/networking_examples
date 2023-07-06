@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:networking_examples/completer_example.dart';
 import 'package:networking_examples/routes/dio/dio_example.dart';
 import 'package:networking_examples/routes/dio/dio_get_data.dart';
-import 'package:networking_examples/routes/dio/dio_interceptor.dart';
-import 'package:networking_examples/routes/dio/dio_post_data.dart';
 import 'package:networking_examples/routes/http/delete_request.dart';
 import 'package:networking_examples/routes/http/get_request.dart';
 import 'package:networking_examples/routes/http/http_example.dart';
 import 'package:networking_examples/routes/http/patch_request.dart';
 import 'package:networking_examples/routes/http/post_request.dart';
 import 'package:networking_examples/routes/http/put_request.dart';
+import 'package:networking_examples/routes/retrofit/retrofit_example.dart';
+import 'package:networking_examples/routes/retrofit/retrofit_get_data.dart';
 
 class Routes {
   static Route? onGenerateRoutes(RouteSettings settings) {
@@ -60,15 +60,16 @@ class Routes {
           return DioGetData();
         });
 
-      case '/dioDownloadFile':
+      case '/retrofitExample':
         return MaterialPageRoute(builder: (BuildContext context) {
-          return DioDownloadFile();
+          return RetrofitExample();
         });
 
-      case '/dioIntercepter':
+      case '/retrofitGetData':
         return MaterialPageRoute(builder: (BuildContext context) {
-          return DioIntercepterExample();
+          return RetrofitGetData();
         });
+
     }
   }
 }
