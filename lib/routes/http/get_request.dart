@@ -53,7 +53,7 @@ class _GetRequestState extends State<GetRequest> {
                                     fontSize: 20,
                                   ),
                                 ),
-                                subtitle: Text(item!.title,
+                                subtitle: Text(item?.title ?? "",
                                     style: TextStyle(fontSize: 15)),
                               ),
                             ),

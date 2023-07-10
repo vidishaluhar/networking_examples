@@ -23,6 +23,7 @@ class _PutRequestState extends State<PutRequest> {
                   if (snapshot.connectionState == ConnectionState.waiting) {
                     return const Center(child: CircularProgressIndicator());
                   } else if (snapshot.hasError) {
+                    print("id: ${snapshot.data?.userId}");
                     return Text("Error Occured : ${snapshot.error}");
                   } else {
                     final data = snapshot.data;

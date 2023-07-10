@@ -22,7 +22,7 @@ abstract class ApiService {
   Future<List<RetrofitModel>> getData();
 
   @GET('posts/{id}')
-  Future<RetrofitModel> getSpecificData(@Path("id") String userId);
+  Future<RetrofitModel> getSpecificData(@Path("id") String Id);
 
   @GET('posts')
   Future<List<RetrofitModel>> getDataUptoQueryParameter(

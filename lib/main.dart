@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:networking_examples/routes/routes.dart';
-import 'package:networking_examples/services/dio_services.dart';
-import 'package:dio/dio.dart';
-
 
 void main() {
   runApp(const MyApp());
@@ -39,17 +36,33 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Networking & Web Services"),
+        title: const Text("Networking & Web Services"),
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       ),
-      body: Center(
+      body: const Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            CustomElevatedButton(pathName: '/http',text: 'Http',),
-            CustomElevatedButton(pathName: '/completerExample',text: 'Completer Example',),
-            CustomElevatedButton(pathName: '/dio',text: 'Dio',),
-            CustomElevatedButton(pathName: '/retrofitExample',text: 'Retrofit',),
+            CustomElevatedButton(
+              pathName: '/http',
+              text: 'Http',
+            ),
+            CustomElevatedButton(
+              pathName: '/dio',
+              text: 'Dio',
+            ),
+            CustomElevatedButton(
+              pathName: '/retrofitExample',
+              text: 'Retrofit',
+            ),
+            CustomElevatedButton(
+              pathName: '/chopper',
+              text: 'Chopper',
+            ),
+            CustomElevatedButton(
+              pathName: '/completerExample',
+              text: 'Completer Example',
+            ),
           ],
         ),
       ),
@@ -57,12 +70,12 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
-
-
 ///Custom Elevated Button
 class CustomElevatedButton extends StatelessWidget {
   const CustomElevatedButton({
-    super.key, required this.pathName, required this.text,
+    super.key,
+    required this.pathName,
+    required this.text,
   });
 
   final String pathName;
@@ -73,14 +86,13 @@ class CustomElevatedButton extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: ElevatedButton(
-        style: ButtonStyle(
-          fixedSize:MaterialStatePropertyAll(Size.fromWidth(250))
-        ),
+        style: const ButtonStyle(
+            fixedSize: MaterialStatePropertyAll(Size.fromWidth(250))),
         onPressed: () {
-          Navigator.pushNamed(context,pathName);
+          Navigator.pushNamed(context, pathName);
         },
-        child: Text("$text",
-            style: TextStyle(
+        child: Text(text,
+            style: const TextStyle(
                 color: Colors.black,
                 fontWeight: FontWeight.w500,
                 fontSize: 20)),

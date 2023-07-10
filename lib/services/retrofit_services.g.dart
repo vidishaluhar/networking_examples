@@ -50,7 +50,7 @@ class _ApiService implements ApiService {
   }
 
   @override
-  Future<RetrofitModel> getSpecificData(String userId) async {
+  Future<RetrofitModel> getSpecificData(String Id) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
@@ -63,7 +63,7 @@ class _ApiService implements ApiService {
     )
             .compose(
               _dio.options,
-              'posts/${userId}',
+              'posts/${Id}',
               queryParameters: queryParameters,
               data: _data,
             )

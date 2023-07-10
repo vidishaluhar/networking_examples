@@ -31,16 +31,17 @@ class _DeleteRequestState extends State<DeleteRequest> {
                       children: [
                         Text(
                           "${data?.userId}",
-                          style: TextStyle(
+                          style:
+                          const TextStyle(
                             color: Colors.black,
                             fontWeight: FontWeight.bold,
                             fontSize: 25,
                           ),
                         ),
-                        SizedBox(width: 10),
+                        const SizedBox(width: 10),
                         Text(
                           "${data?.title}",
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: Colors.black,
                             fontWeight: FontWeight.bold,
                             fontSize: 25,

@@ -35,13 +35,16 @@ class HttpService {
     final http.Response response = await http.post(
         Uri.parse("https://jsonplaceholder.typicode.com/albums/"),
         headers: <String, String>{
-          'Content-type': 'application/json; charset=UTF-8'
+            'Content-type': 'application/json; charset=UTF-8'
         },
+
+
         body: jsonEncode(HttpModel(
           title: 'Vidisha',
-          userId: 11,
+          userId: "11",
         )
           ..toJson()));
+    debugPrint("${response.statusCode}");
     print(response.statusCode);
     print(response.body);
     if (response.statusCode == 201) {
@@ -58,9 +61,10 @@ class HttpService {
       headers: <String, String>{
         'Content-type': 'application/json; charset=UTF-8'
       },
+
       body: jsonEncode(
         HttpModel(
-          userId: 1,
+          userId: "1",
           title: 'Priyanshi',
         ).toJson(),
       ),
@@ -85,7 +89,7 @@ class HttpService {
       },
       body: jsonEncode(
         HttpModel(
-          userId: 1,
+          userId: "1",
           title: 'Radhika',
         ).toJson(),
       ),

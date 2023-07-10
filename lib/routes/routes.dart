@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:networking_examples/completer_example.dart';
+import 'package:networking_examples/routes/chopper/chopper_example.dart';
 import 'package:networking_examples/routes/dio/dio_example.dart';
 import 'package:networking_examples/routes/dio/dio_get_data.dart';
 import 'package:networking_examples/routes/http/delete_request.dart';
@@ -86,6 +87,12 @@ class Routes {
         return MaterialPageRoute(builder: (BuildContext context) {
           return RetrofitPostDataExample();
         });
+
+      case '/chopper':
+        return MaterialPageRoute(builder: (BuildContext context) {
+          return ChopperExample();
+        });
+
 
     }
     return null;
