@@ -4,10 +4,10 @@ part 'chopper_model.g.dart';
 
 @JsonSerializable()
 class ChopperModel {
-  final int userId;
-  final String title;
+   int? userId;
+   String? title;
 
-  ChopperModel({required this.userId, required this.title});
+  ChopperModel({ this.userId,  this.title,});
 
   factory ChopperModel.fromJson(Map<String, dynamic> map) =>
       _$ChopperModelFromJson(map);

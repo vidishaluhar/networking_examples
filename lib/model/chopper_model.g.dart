@@ -7,8 +7,8 @@ part of 'chopper_model.dart';
 // **************************************************************************
 
 ChopperModel _$ChopperModelFromJson(Map<String, dynamic> json) => ChopperModel(
-      userId: json['userId'] as int,
-      title: json['title'] as String,
+      userId: json['userId'] as int?,
+      title: json['title'] as String?,
     );
 
 Map<String, dynamic> _$ChopperModelToJson(ChopperModel instance) =>
